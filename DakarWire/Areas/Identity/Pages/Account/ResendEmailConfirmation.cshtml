@@ -1,0 +1,36 @@
+﻿@page
+@model ResendEmailConfirmationModel
+@{
+    ViewData["Title"] = "Resend email confirmation";
+}
+
+<h1 class="title mb-4">@ViewData["Title"]</h1>
+<h2 class="subtitle mb-3">Enter your email.</h2>
+
+<div class="row px-4 md:0">
+    <div class="col-md-6 rounded-md border p-6">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            
+
+            <div class="">
+                <label asp-for="Input.Email" class="block mb-2 text-sm font-medium text-gray-900">Enter your email</label>
+                <div class="flex items-center gap-2 md:gap-4 ">
+                    <div class="flex items-center bg-gray-50 border border-blue-500 px-3 text-sm rounded-lg w-full focus:ring-blue-500">
+                        <svg class="w-5 h-5 text-gray-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                        <input asp-for="Input.Email" 
+                        class="bg-gray-50 text-sm outline-none border-none focus:border-0 block w-full pl-6 p-2.5 " placeholder="Your email address..." />  
+                    </div>
+                    <button type="submit" class="cursor-pointer whitespace-nowrap text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                    >Resend</button>     
+                </div>
+                <span asp-validation-for="Input.Email" class="text-red-600"></span>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

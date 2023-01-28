@@ -1,0 +1,110 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1 class="title text-center my-6">@ViewData["Title"]</h1>
+
+<div class="gap-6 mt-3 md:gap-4 max-w-2xl flex flex-col md:flex-row-reverse rounded-lg border container p-12 shadow-lg">
+    <div class="flex-1 order-2">
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h2 class="subtitle mb-3">Create a new account.</h2>
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">   
+                <div class="relative">
+                    <input type="text" asp-for="Input.Email" autocomplete="username" aria-required="true"
+                     class="block select-none px-2.5 pb-2 pt-3 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-blue-600 appearance-none dark:text-white dark:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label asp-for="Input.Email" class="absolute text-sm text-blue-600 dark:text-blue-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"></label>
+                </div>
+                <span asp-validation-for="Input.Email" class="mt-2 select-none text-xs text-red-600 dark:text-red-400"></span>    
+            </div>
+            
+            <div class="mb-3">   
+                <div class="relative">
+                    <input type="text" asp-for="Input.Password" autocomplete="new_password" aria-required="true"
+                     class="block px-2.5 pb-2 pt-3 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-blue-600 appearance-none dark:text-white dark:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label asp-for="Input.Password" class="absolute text-sm text-blue-600 dark:text-blue-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"></label>
+                </div>
+                <span asp-validation-for="Input.Password" class="mt-2 select-none text-xs text-red-600 dark:text-red-400"></span>    
+            </div>
+
+            <div class="mb-3">   
+                <div class="relative">
+                    <input type="text" asp-for="Input.ConfirmPassword" autocomplete="new_ConfirmPassword" aria-required="true"
+                     class="block select-none px-2.5 pb-2 pt-3 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-blue-600 appearance-none dark:text-white dark:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label asp-for="Input.ConfirmPassword" class="absolute select-none text-sm text-blue-600 dark:text-blue-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"></label>
+                </div>
+                <span asp-validation-for="Input.ConfirmPassword" class="mt-2 text-xs text-red-600 dark:text-red-400"></span>    
+            </div>
+
+            <button id="registerSubmit" type="submit" class="mb-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Register</button>
+        </form>
+        
+            @* <div class="form-floating">
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                <label asp-for="Input.Email"></label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                <label asp-for="Input.Password"></label>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                <label asp-for="Input.ConfirmPassword"></label>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        </form> *@
+    </div>
+    <div class="flex-1 order-1">
+        <section>
+            <h3 class="subtitle mb-3">Use another service to register.</h3>
+            <p class="mb-3  ">
+                with one click, you can become a membmer!
+            </p>
+            
+            @{
+                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                {
+                    <div>
+                        <p>
+                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
+                            about setting up this ASP.NET application to support logging in via external services</a>.
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div>
+                            <p class="flex gap-2">
+                                @foreach (var provider in Model.ExternalLogins)
+                                {
+                                    @if(provider.Name == "Google"){
+                                        <button type="submit" class="google-btn" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                          <svg class="mr-2 -ml-1 w-4 h-4 inline-flex" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>
+                                        <span>@provider.DisplayName</span></button>
+                                    }
+                                    else if(provider.Name == "Facebook"){
+                                        <button type="submit" class="facebook-btn" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account"> 
+                                          <svg class="mr-2 -ml-1 w-4 h-4 inline-flex" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.1 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.4 0 225.4 0c-73.22 0-121.1 44.38-121.1 124.7v70.62H22.89V288h81.39v224h100.2V288z"></path></svg>
+                                        <span>@provider.DisplayName</span></button>
+                                    }
+                                }
+                            </p>
+                        </div>
+                    </form>
+                }
+            }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

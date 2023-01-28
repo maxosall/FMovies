@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DakarWire", "DakarWire\DakarWire.csproj", "{95DF0AE0-1503-449E-BD74-B4045F967973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeMovies.Models", "FreeMovies.Models\FreeMovies.Models.csproj", "{90CA8602-9991-473D-ADBD-04A3ACC88F8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeMovies.API", "FreeMovies.API\FreeMovies.API.csproj", "{3E113124-C091-4551-87DD-6A845C37F129}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95DF0AE0-1503-449E-BD74-B4045F967973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DF0AE0-1503-449E-BD74-B4045F967973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DF0AE0-1503-449E-BD74-B4045F967973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DF0AE0-1503-449E-BD74-B4045F967973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90CA8602-9991-473D-ADBD-04A3ACC88F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90CA8602-9991-473D-ADBD-04A3ACC88F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90CA8602-9991-473D-ADBD-04A3ACC88F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90CA8602-9991-473D-ADBD-04A3ACC88F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E113124-C091-4551-87DD-6A845C37F129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E113124-C091-4551-87DD-6A845C37F129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E113124-C091-4551-87DD-6A845C37F129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E113124-C091-4551-87DD-6A845C37F129}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

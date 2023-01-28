@@ -1,0 +1,41 @@
+﻿@page
+@model PersonalDataModel
+@{
+    ViewData["Title"] = "Personal Data";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<h2 class="subtitle mb-3">@ViewData["Title"]</h2>
+
+<div class="row">
+    @* <div class="col-md-6"> *@
+    <div class="">
+        <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
+        <p>
+            <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
+        </p>
+
+        <div class="flex items-baseline gap-4 my-4">
+            <form id="download-data" asp-page="DownloadPersonalData" method="post">
+                <button class="mb-3 flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 focus:outline-none " type="submit">Download 
+                <svg aria-hidden="true" class="ml-2 w-4 h-4 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd"></path></svg>
+                </button>
+            </form>
+            <p>
+                <a id="delete" asp-page="DeletePersonalData" class="mb-3 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 focus:outline-none ">
+                Delete </a>
+            </p>
+        </div>
+        
+        @* <form id="download-data" asp-page="DownloadPersonalData" method="post">
+            <button class="btn btn-primary" type="submit">Download</button>
+        </form>
+        <p>
+            <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger">Delete</a>
+        </p> *@
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

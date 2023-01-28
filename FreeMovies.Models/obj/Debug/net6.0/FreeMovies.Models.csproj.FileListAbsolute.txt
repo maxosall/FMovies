@@ -1,0 +1,12 @@
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\bin\Debug\net6.0\FreeMovies.Models.deps.json
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\bin\Debug\net6.0\FreeMovies.Models.dll
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\bin\Debug\net6.0\ref\FreeMovies.Models.dll
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\bin\Debug\net6.0\FreeMovies.Models.pdb
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\obj\Debug\net6.0\FreeMovies.Models.csproj.AssemblyReference.cache
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\obj\Debug\net6.0\FreeMovies.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\obj\Debug\net6.0\FreeMovies.Models.AssemblyInfoInputs.cache
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\obj\Debug\net6.0\FreeMovies.Models.AssemblyInfo.cs
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\obj\Debug\net6.0\FreeMovies.Models.csproj.CoreCompileInputs.cache
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\obj\Debug\net6.0\FreeMovies.Models.dll
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\obj\Debug\net6.0\ref\FreeMovies.Models.dll
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.Models\obj\Debug\net6.0\FreeMovies.Models.pdb

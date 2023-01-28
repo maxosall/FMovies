@@ -1,0 +1,49 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>DakarWire</PageTitle>
+
+<div class="">   
+    <main>
+
+        <nav class="border-b bg-white relative ">
+        <div class="container flex items-center h-14 md:h-16 justify-between  px-4">
+            <div class="h-full flex items-center">
+                <a href="~/" class="flex items-center">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                    <span class=" text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                </a>
+            </div>
+
+            <div class="hidden h-full absolute top-14 md:top-16 md:static md:flex md:my-0">
+                <div class="my-2 container md:flex items-center md:justify-center md:items-center">
+                    <a href="#" class="nav-link-active">Home</a>
+                    <a href="#" class="nav-link">Genre</a>
+                    <a href="#" class="nav-link">Country</a>
+                    <a href="#" class="nav-link">Movies</a>
+                    <a href="#" class="nav-link">TV-Series</a>
+                    <a href="#" class="nav-link">Top IMDb</a>
+                         
+                </div>
+            </div>
+
+            <div class="flex h-full items-center ">
+                <span class="cursor-pointer px-4 py-2 md:px-5 md:py-2.5">
+                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd">
+                    </path></svg>
+                </span> 
+                
+                <LoginDisplay />
+                <a class="secondary-btn md:hidden">                    
+                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>

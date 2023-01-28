@@ -1,0 +1,37 @@
+﻿@page
+@model DeletePersonalDataModel
+@{
+    ViewData["Title"] = "Delete Personal Data";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<h3 class="subtitle mb-3">@ViewData["Title"]</h3>
+
+<div class="alert alert-warning max-w-lg" role="alert">
+    <p>
+        <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
+    </p>
+</div>
+
+<div class="max-w-lg">
+    <form id="delete-user" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (Model.RequirePassword)
+        {
+            <div class="my-2">   
+                <div class="relative">
+                    <input asp-for="Input.Password" autocomplete="current-password" aria-required="true"
+                     class="block px-2 pb-2 pt-3 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-blue-600 appearance-none dark:text-white dark:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label asp-for="Input.Password" class="absolute text-sm text-blue-600 dark:text-blue-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"></label>
+                </div>
+                <span asp-validation-for="Input.Password" class="mt-2 text-xs text-red-600 dark:text-red-400"></span>    
+            </div>
+        }
+        <button id="login-submit" type="submit" class="flex items-center mb-3 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">
+            Delete data and close my account </button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
