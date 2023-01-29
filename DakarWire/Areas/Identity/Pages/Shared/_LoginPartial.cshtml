@@ -11,13 +11,13 @@
     </li>
     <li class="nav-item">
         <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/" method="post">
-            <button  type="submit" class="primary-btn">Logout</button>
+            <button  type="submit" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover: bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-300">Logout</button>
         </form>
     </li>
 }
 else
 {
-    <a class="secondary-btn" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    <a class="primary-btn" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>    
+    <a class="px-3 py-2 text-xs font-medium text-center text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 rounded-lg mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    <a class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover: bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-300" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>    
 }
 </ul>

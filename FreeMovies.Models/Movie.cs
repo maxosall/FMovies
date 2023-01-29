@@ -35,9 +35,9 @@ public class Movie
     public DateOnly? Year { get; set; }
 
     public virtual Country? Country { get; set; } = new Country();
-    public virtual List<Genre>? Genres { get; set; } 
+    public virtual List<Genre>? Genres { get; set; }
     [ForeignKey(nameof(Actor))]
     public int? ActorId { get; set; }
-    public virtual List<Actor>? Actors { get; set; } 
+    public virtual List<Actor>? Actors { get; set; }
     public virtual List<Comment>? Comments { get; set; } = new List<Comment>();
 }

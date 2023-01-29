@@ -10,18 +10,18 @@ namespace FreeMovies.API.Controllers;
 public class MoviesController : ControllerBase
 {
     private readonly IMovieRepository _movieRepository;
-   
+
     public MoviesController(IMovieRepository movieRepository)
     {
         _movieRepository = movieRepository;
     }
-    
+
     [HttpGet]
     public async Task<ActionResult> GetMovies()
     {
         try
         {
-            return Ok( await _movieRepository.GetMovies());
+            return Ok(await _movieRepository.GetMovies());
         }
         catch (Exception)
         {
@@ -31,7 +31,7 @@ public class MoviesController : ControllerBase
 
     private ObjectResult StatusCodeMessage(string err_msg = "Error retrieving data from database ")
     {
-        return StatusCode(StatusCodes.Status500InternalServerError,  err_msg);
+        return StatusCode(StatusCodes.Status500InternalServerError, err_msg);
     }
 
     [HttpGet("{id:int}")]
@@ -57,15 +57,15 @@ public class MoviesController : ControllerBase
     {
         try
         {
-            if(movie is null ) return BadRequest();
+            if (movie is null) return BadRequest();
 
             var addedMovie = await _movieRepository.AddMovie(movie);
 
             return CreatedAtAction(nameof(GetMovie),
-                new {id = addedMovie.Id},
+                new { id = addedMovie.Id },
                 addedMovie);
         }
-        catch (System.Exception)
+        catch (Exception)
         {
             return StatusCodeMessage("Error ADDING DATA To the database");
         }
