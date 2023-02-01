@@ -3,6 +3,7 @@ using System;
 using FreeMovies.API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FreeMovies.API.Migrations
 {
     [DbContext(typeof(FreeMoviesDbContext))]
-    partial class FreeMoviesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230130201226_change dateonly to datetime")]
+    partial class changedateonlytodatetime
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
@@ -74,6 +77,9 @@ namespace FreeMovies.API.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
+                    b.Property<int?>("MovieId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int?>("SocialMediaAccountsId")
                         .HasColumnType("INTEGER");
 
@@ -129,6 +135,9 @@ namespace FreeMovies.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER")
                         .HasColumnName("MovieId");
+
+                    b.Property<int?>("ActorId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int?>("Country")
                         .HasColumnType("INTEGER");

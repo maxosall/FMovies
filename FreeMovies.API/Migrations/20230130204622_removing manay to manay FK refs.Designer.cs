@@ -3,6 +3,7 @@ using System;
 using FreeMovies.API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FreeMovies.API.Migrations
 {
     [DbContext(typeof(FreeMoviesDbContext))]
-    partial class FreeMoviesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230130204622_removing manay to manay FK refs")]
+    partial class removingmanaytomanayFKrefs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");

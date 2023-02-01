@@ -1,7 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-
 namespace FreeMovies.Models;
-
 public class Season
 {
     [MaxLength(50)]

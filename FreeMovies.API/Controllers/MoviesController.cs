@@ -70,4 +70,24 @@ public class MoviesController : ControllerBase
             return StatusCodeMessage("Error ADDING DATA To the database");
         }
     }
+
+    [HttpPut("{id:int}")]
+    public async Task<ActionResult<Movie>> Update(int id, Movie movie)
+    {
+        try
+        {
+            if (id != movie.Id) return BadRequest("Movie Id Mismatch");
+
+            var movieToUpdate = await _movieRepository.GetMovie(id);
+
+            if (movieToUpdate == null)
+                return NotFound($"Article with id= {id} is not founf");
+
+            return await _movieRepository.UpdateMovie(movie);
+        }
+        catch (Exception)
+        {
+            return StatusCodeMessage("Error UPDATIG data on database");
+        }
+    }
 }
