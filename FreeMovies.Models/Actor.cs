@@ -5,6 +5,7 @@ namespace FreeMovies.Models
 {
     public class Actor
     {
+        [Key]
         [Column("ActorId")]
         public int Id { get; set; }
 
@@ -17,6 +18,7 @@ namespace FreeMovies.Models
         public string? LastName { get; set; }
 
         [MaxLength(350)]
+        [Column(TypeName = "nvarchar(350)")]
         public string? Bio { get; set; }
         public SocialMediaAccount? SocialMediaAccounts { get; set; }
 

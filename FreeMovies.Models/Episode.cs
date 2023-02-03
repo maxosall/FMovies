@@ -5,6 +5,7 @@ namespace FreeMovies.Models;
 
 public class Episode
 {
+    [Key]
     [Column("EpisodeId")]
     public int Id { get; set; }
 
@@ -13,7 +14,7 @@ public class Episode
 
     [MaxLength(300)]
     public string? EpisodeDescription { get; set; }
-    
+
     [DataType(DataType.DateTime)]
     public DateTime UploadedDate { get; set; }
     public string EpisodeVideoPath { get; set; }

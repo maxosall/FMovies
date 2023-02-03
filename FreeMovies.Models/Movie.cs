@@ -5,13 +5,15 @@ namespace FreeMovies.Models;
 
 public class Movie
 {
+    [Key]
     [Column("MovieId")]
     public int Id { get; set; }
 
-    [Required, DataType("nvarchar"), MaxLength(150)]
+    [Required]
+    [Column(TypeName = "nvarchar(150)"), MaxLength(150)]
     public string MovieTitle { get; set; }
 
-    [DataType("nvarchar"), MaxLength(300)]
+    [Column(TypeName = "nvarchar(300)"), MaxLength(300)]
     public string Discription { get; set; }
 
     [Required, Display(Name = "Movie Video Path")]
