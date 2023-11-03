@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "FreeMovies.API/1.0.0": {
         "dependencies": {
+          "BrightMinds.Models": "1.0.0",
           "FreeMovies.Models": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.3",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.7",
@@ -541,6 +542,11 @@
           }
         }
       },
+      "BrightMinds.Models/1.0.0": {
+        "runtime": {
+          "BrightMinds.Models.dll": {}
+        }
+      },
       "FreeMovies.Models/1.0.0": {
         "runtime": {
           "FreeMovies.Models.dll": {}
@@ -847,6 +853,11 @@
       "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
+    },
+    "BrightMinds.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "FreeMovies.Models/1.0.0": {
       "type": "project",

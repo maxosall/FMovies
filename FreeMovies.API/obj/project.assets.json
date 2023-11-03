@@ -649,6 +649,16 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+      "BrightMinds.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BrightMinds.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BrightMinds.Models.dll": {}
+        }
+      },
       "FreeMovies.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1643,6 +1653,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "BrightMinds.Models/1.0.0": {
+      "type": "project",
+      "path": "../BrightMinds.Models/BrightMinds.Models.csproj",
+      "msbuildProject": "../BrightMinds.Models/BrightMinds.Models.csproj"
+    },
     "FreeMovies.Models/1.0.0": {
       "type": "project",
       "path": "../FreeMovies.Models/FreeMovies.Models.csproj",
@@ -1651,6 +1666,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BrightMinds.Models >= 1.0.0",
       "FreeMovies.Models >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.3",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.7",
@@ -1685,6 +1701,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\maxo\\Documents\\maxo_projects\\FMovies\\BrightMinds.Models\\BrightMinds.Models.csproj": {
+              "projectPath": "C:\\Users\\maxo\\Documents\\maxo_projects\\FMovies\\BrightMinds.Models\\BrightMinds.Models.csproj"
+            },
             "C:\\Users\\maxo\\Documents\\maxo_projects\\FMovies\\FreeMovies.Models\\FreeMovies.Models.csproj": {
               "projectPath": "C:\\Users\\maxo\\Documents\\maxo_projects\\FMovies\\FreeMovies.Models\\FreeMovies.Models.csproj"
             }

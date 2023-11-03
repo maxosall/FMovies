@@ -80,3 +80,5 @@ C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.API\bin\Debug\net6.0\ru
 C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.API\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.API\bin\Debug\net6.0\Mono.TextTemplating.dll
 C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.API\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.API\bin\Debug\net6.0\BrightMinds.Models.dll
+C:\Users\maxo\Documents\maxo_projects\FMovies\FreeMovies.API\bin\Debug\net6.0\BrightMinds.Models.pdb

@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FreeMovies.Models\FreeMovies.Models.csproj" />
+    <ProjectReference Include="..\BrightMinds.Models\BrightMinds.Models.csproj" />
   </ItemGroup>
 
 </Project>
